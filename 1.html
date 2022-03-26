@@ -1,0 +1,28 @@
+<style type="text/css" media="all">
+	#clock{border:1px solid #a1a1a1;padding:8px;
+		border-radius: 30px;font-size: 30px;font-family: Serif;margin-top: 45%;color: #4596fc;font-weight: 600;
+	}
+</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>How to create a simple clock</title>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	</head>
+	<body>
+		<center><div id="clock">Time is <span id="hour"></span>	hour <span id="minutes"></span> minute <span id="seconds"></span> second </div></center>
+	</body>
+</html>
+<script type="text/javascript" charset="utf-8">
+function time(){
+	var time = new Date();
+	var hour = time.getHours();
+	var minutes = time.getMinutes();
+	var second = time.getSeconds();
+	document.getElementById("hour").innerHTML = hour;
+	document.getElementById("minutes").innerHTML = minutes;
+	document.getElementById("seconds").innerHTML = second;
+}
+setInterval(function(){},1000)
+</script>
